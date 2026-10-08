@@ -2,6 +2,8 @@
 
 > Share one Solana donation link. The donor's gift and the sponsor's match settle together in one on-chain transaction.
 
+**Live demo:** [Open MatchLink on Vercel](https://matchlink-fawn.vercel.app)
+
 **[Quick Start](#quick-start)** · **[Architecture](#architecture)** · **[Demo Flow](#demo-flow)** · **[Roadmap](#roadmap)**
 
 ## Project Status
