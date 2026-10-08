@@ -25,7 +25,7 @@ export async function GET(request: Request, context: { params: Promise<{ address
     const base = new URL(request.url);
     const body: ActionGetResponse = {
       type: "action",
-      icon: `${process.env.NEXT_PUBLIC_APP_URL || base.origin}/matchlink.svg`,
+      icon: `${base.origin}/matchlink.svg`,
       title: "MatchLink donation",
       description: `Donate to this campaign. ${campaign.matchBps / 100}% sponsor matching, up to ${(Number(campaign.maxMatchPerDonation) / 10 ** decimals).toLocaleString()} tokens per donation.`,
       label: "Donate",

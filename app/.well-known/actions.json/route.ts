@@ -1,10 +1,13 @@
 import { NextResponse } from "next/server";
 
-export function GET(request: Request) {
-  const origin = process.env.NEXT_PUBLIC_APP_URL || new URL(request.url).origin;
+const cors = { "Access-Control-Allow-Origin": "*", "Cache-Control": "public, max-age=60" };
+
+export function GET() {
   return NextResponse.json({
-    rules: [
-      { pathPattern: "/api/actions/**", apiPath: "/api/actions/**" },
-    ],
-  }, { headers: { "Access-Control-Allow-Origin": "*", "Cache-Control": "public, max-age=60", "X-Actions-Origin": origin } });
+    rules: [{ pathPattern: "/api/actions/**", apiPath: "/api/actions/**" }],
+  }, { headers: cors });
+}
+
+export function OPTIONS() {
+  return new Response(null, { status: 204, headers: cors });
 }

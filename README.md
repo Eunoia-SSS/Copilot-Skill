@@ -89,15 +89,16 @@ npm run dev
 
 Open `http://localhost:3000`. The root page is a preview until a deployed program and campaign are configured. Campaign setup is at `http://localhost:3000/create`.
 
-Set these values in `.env.local` after deployment:
+Set these values in `.env.local` after deploying the Anchor program:
 
 ```dotenv
-NEXT_PUBLIC_APP_URL=http://localhost:3000
 NEXT_PUBLIC_SOLANA_CLUSTER=devnet
 NEXT_PUBLIC_PROGRAM_ID=<deployed-program-id>
 NEXT_PUBLIC_CAMPAIGN_ADDRESS=
 SOLANA_RPC_URL=https://api.devnet.solana.com
 ```
+
+For Vercel setup, environment scopes, and the devnet deployment checklist, see [DEPLOY_VERCEL.md](DEPLOY_VERCEL.md).
 
 ### Build and deploy on devnet
 
