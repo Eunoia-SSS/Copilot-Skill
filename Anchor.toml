@@ -1,0 +1,16 @@
+[features]
+resolution = true
+skip-lint = false
+
+[programs.localnet]
+matchlink = "Fg6PaFpoGXkYsidMpWxTWqkZ8kQJ8WZy9V1wJ6r3g4x"
+
+[programs.devnet]
+matchlink = "Fg6PaFpoGXkYsidMpWxTWqkZ8kQJ8WZy9V1wJ6r3g4x"
+
+[provider]
+cluster = "Devnet"
+wallet = "~/.config/solana/id.json"
+
+[workspace]
+members = ["programs/matchlink"]
